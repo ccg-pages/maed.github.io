@@ -1,0 +1,39 @@
+name: "Upload Images"
+description: "Upload images/files into the repository via GitHub Issues"
+title: "[Upload] "
+labels: ["upload"]
+body:
+  - type: input
+    id: path
+    attributes:
+      label: "Target Path"
+      description: "Where should the images be saved?"
+      placeholder: "assets/img/EMP/"
+      value: "assets/img/EMP/"
+    validations:
+      required: true
+  - type: textarea
+    id: images
+    attributes:
+      label: "Images"
+      description: "Drag or paste your files here. GitHub will automatically convert them to Markdown image links."
+      placeholder: "![alt text](https://github.com/...)"
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Additional Notes"
+      description: "Any additional information about these images"
+      placeholder: "Optional notes..."
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        **Usage Tips:**
+        - For EMP events: use `assets/img/EMP/`
+        - For partner logos: use `assets/img/partners/`
+        - Make sure paths match those in your Markdown/YAML files

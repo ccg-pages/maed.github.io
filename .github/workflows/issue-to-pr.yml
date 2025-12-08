@@ -32,7 +32,7 @@ jobs:
             
             // Skip yml-edit issues - they are handled by update-yml-with-images.yml
             if (hasYmlEdit || body.includes('Which YAML file do you want to edit')) {
-              console.log('Skipping: this is a yml-edit issue, handled by update-yml-with-images.yml');
+              console.log('Skipping: yml-edit issues are handled by update-yml-with-images.yml workflow');
               core.setOutput('should_run', 'false');
               return;
             }
