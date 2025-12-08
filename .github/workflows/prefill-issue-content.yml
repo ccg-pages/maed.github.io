@@ -24,7 +24,7 @@ jobs:
             // Check if the issue has content-edit label (Markdown files only)
             const hasContentEdit = labelNames.includes('content-edit');
             const hasYmlEdit = labelNames.includes('yml-edit');
-            const hasUpload = labelNames.includes('upload');
+            const hasUpload = labelNames.includes('upload-image');
             const body = context.payload.issue.body || '';
             console.log('Full issue body:', body);
             

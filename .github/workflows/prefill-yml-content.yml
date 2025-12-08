@@ -23,7 +23,7 @@ jobs:
             
             // Check if this is a yml-edit issue
             const hasYmlEdit = labelNames.includes('yml-edit');
-            const hasUpload = labelNames.includes('upload');
+            const hasUpload = labelNames.includes('upload-image');
             const body = context.payload.issue.body || '';
             console.log('Full issue body:', body);
             

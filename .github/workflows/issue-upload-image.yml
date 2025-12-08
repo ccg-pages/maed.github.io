@@ -10,8 +10,8 @@ permissions:
 
 jobs:
   upload:
-    # Only trigger if issue has the label "upload"
-    if: contains(github.event.issue.labels.*.name, 'upload')
+    # Only trigger if issue has the label "upload-image"
+    if: contains(github.event.issue.labels.*.name, 'upload-image')
     runs-on: ubuntu-latest
 
     steps:
