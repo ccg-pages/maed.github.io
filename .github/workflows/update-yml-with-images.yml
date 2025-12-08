@@ -111,10 +111,17 @@ jobs:
             console.log('✅ YAML file path:', filePath);
             console.log('✅ YAML content length:', newContent.length);
             console.log('✅ Found images:', imageUrls.length);
+            if (imageUrls.length > 0) {
+              console.log('✅ Image URLs:', imageUrls);
+            }
+            
+            const imageUrlsJson = JSON.stringify(imageUrls);
+            console.log('✅ Image URLs JSON:', imageUrlsJson);
             
             core.setOutput('filePath', filePath);
             core.setOutput('yamlContent', newContent);
-            core.setOutput('imageUrls', JSON.stringify(imageUrls));
+            core.setOutput('imageUrls', imageUrlsJson);
+            core.setOutput('imageUrlsCount', imageUrls.length.toString());
             core.setOutput('should_run', 'true');
 
       - name: Checkout repository
@@ -122,7 +129,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Download and save images
-        if: steps.parse.outputs.should_run == 'true' && steps.parse.outputs.imageUrls != '[]'
+        if: steps.parse.outputs.should_run == 'true' && steps.parse.outputs.imageUrlsCount != '0'
         id: images
         env:
           IMAGE_URLS: ${{ steps.parse.outputs.imageUrls }}
