@@ -4,3 +4,5 @@ _site
 .jekyll-metadata
 vendor
 .pdf
+node_modules/
+assets/css/style.css.map

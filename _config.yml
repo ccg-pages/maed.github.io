@@ -62,7 +62,7 @@ permalink: "/stories/:title"
 relative_permalinks: false
 
 # build settings
-exclude: ["script", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "package.json", "node_modules","*_tmp.html","*_tmp.*"]
+exclude: ["script", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "package.json", "node_modules","*_tmp.html","*_tmp.*","assets/css/style.scss"]
 markdown: kramdown
 theme: jekyll-theme-primer
 # 添加以下设置
