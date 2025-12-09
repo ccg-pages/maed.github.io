@@ -4,7 +4,7 @@ description: "Demo site using the shared page-template"
 baseurl: ""
 url: ""
 
-remote_theme: YOUR-ORG_OR_USER/page-template@main
+remote_theme: ccg-pages/page-template@main
 
 markdown: kramdown
 theme: null
